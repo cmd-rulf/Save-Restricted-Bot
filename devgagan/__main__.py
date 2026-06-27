@@ -32,6 +32,12 @@ async def schedule_expiry_check():
         await asyncio.sleep(60)  # Check every hour
         gc.collect()
 
+#peerid
+import pyrogram.utils
+
+pyrogram.utils.MIN_CHAT_ID = -999999999999
+pyrogram.utils.MIN_CHANNEL_ID = -100999999999999
+
 async def devggn_boot():
     for all_module in ALL_MODULES:
         importlib.import_module("devgagan.modules." + all_module)
@@ -61,8 +67,3 @@ if __name__ == "__main__":
     loop.run_until_complete(devggn_boot())
 
 # ------------------------------------------------------------------ #
-#peerid
-import pyrogram.utils
-
-pyrogram.utils.MIN_CHAT_ID = -999999999999
-pyrogram.utils.MIN_CHANNEL_ID = -100999999999999
