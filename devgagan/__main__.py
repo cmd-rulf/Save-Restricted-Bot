@@ -61,3 +61,8 @@ if __name__ == "__main__":
     loop.run_until_complete(devggn_boot())
 
 # ------------------------------------------------------------------ #
+#peerid
+import pyrogram.utils
+
+pyrogram.utils.MIN_CHAT_ID = -999999999999
+pyrogram.utils.MIN_CHANNEL_ID = -100999999999999
